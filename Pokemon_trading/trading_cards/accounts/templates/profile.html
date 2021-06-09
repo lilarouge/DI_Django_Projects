@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% include 'navbar.html'%}
+
+{% block content %}
+<h1> Welcome {{user.username}}</h1>
+
+
+{% csrf_token %}
+{{ user.username }} 
+{{ user.email }}
+{{ user.first_name }} 
+{{ user.last_name }}
+<br>
+<!-- <h3>My cards</h3>
+{% for queen in my_queens %}
+
+<ul>
+<li>{{queen.queen}}</li>
+<li>{{queen.quote}}</li>
+
+</ul>
+
+{% endfor %} -->
+{% endblock %}
