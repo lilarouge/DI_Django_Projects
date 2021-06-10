@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.shortcuts import render,redirect
 from .models import * 
 from .forms import * 
@@ -9,10 +6,6 @@ from .forms import *
 def home(request):
     discussions=Discussion.objects.all()
     count=discussions.count()
-    
-    # discussions=[]
-    # for i in forums:
-    #     discussions.append(i.Discussion.objects.all())
  
     context={
               'count':count,
@@ -39,8 +32,7 @@ def addAComment(request,pk):
     if request.method == 'POST':
         form = CreateInComment(request.POST)
         if form.is_valid():
-# adding the profile inside the add comment
-            
+# adding the profile inside the add comment           
 # adding the discussion on the comment
             comment= form.save(commit=False)
             comment.discussion= discussion

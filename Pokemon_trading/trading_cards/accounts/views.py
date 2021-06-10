@@ -10,9 +10,6 @@ from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 @login_required
-def profile(request):    
-   
-    return render(request, 'profile.html')
 
 def my_cards(request):
     if request.method =='GET':
