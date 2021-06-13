@@ -1,0 +1,15 @@
+{% extends 'partials/base.html' %}
+{% block title %}add_director{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+    <h3>Add Film</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="table table-hover">
+            {{form}}
+        </table>
+        <button type="submit" class="btn btn-primary add_form" style="margin: 10px 0;">Submit</button>
+    </form>
+</div>
+{% endblock %}
