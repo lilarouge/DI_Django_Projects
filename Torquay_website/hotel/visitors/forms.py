@@ -7,8 +7,17 @@ from .models import *
 #     check_in = forms.DateField(initial=datetime.date.today, )
 #     check_out = forms.DateField(initial=datetime.date.today)
 
-class BookingsForm(forms.ModelForm):
+class BookingDatesForm(forms.ModelForm):
     class Meta:
         model= Bookings
-        fields= "__all__"
+        fields= ("check_in","check_out")
 
+class BookingRoomForm(forms.ModelForm):
+    class Meta:
+        model= Bookings
+        fields= ('room',)
+
+class Rooms_update(forms.ModelForm):
+    class Meta:
+        model= Rooms
+        fields='__all__'

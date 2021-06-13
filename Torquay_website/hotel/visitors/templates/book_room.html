@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% include 'navbar.html'%}
+
+{% block content %}
+<h1> The rooms available at that time </h1>
+
+<form method="POST">
+{% csrf_token %}
+    {{ form }}
+<button>Chose</button>
+</form>
+{% endblock %}
