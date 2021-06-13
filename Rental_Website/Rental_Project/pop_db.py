@@ -2,6 +2,7 @@ import os
 import django
 from faker import Faker
 import random
+# Don't forget to run the file to the terminal py pop_db to populate!
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Rental_Project.settings')
 django.setup()

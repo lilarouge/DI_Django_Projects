@@ -11,6 +11,9 @@ class Customer(models.Model):
     city = models.CharField(max_length=200)
     country  = models.CharField(max_length=200)
 
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
+
 
 class Vehicle(models.Model):
     vehicle_type = models.ForeignKey('VehicleType', on_delete=models.CASCADE )

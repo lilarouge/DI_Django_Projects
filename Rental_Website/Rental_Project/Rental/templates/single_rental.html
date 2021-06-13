@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{% block content%}
+<h1>Rental</h1>
+
+<ul>
+    <li>{{ single_rental.rental_date }}</li>
+    {% if single_rental.rental_return = null%}
+    <li>not yet returned</li>
+    {%else%}
+    <li>{{single_rental.rental_return}}</li>
+    {% endif%}
+    <li>{{ single_rental.customer }}</li>
+    <li>{{ single_rental.vehicle }}</li>
+    
+</ul>
+
+{% endblock %}
