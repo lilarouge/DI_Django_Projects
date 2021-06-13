@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% include 'navbar.html'%}
+
+{% block content %}
+
+<form method="POST" style="margin-left: 34%; margin-top: 7%;">
+    {% csrf_token %}
+        {{ form }}
+    <button>Login</button>
+    </form>
+<div class="container">
+    <div class="row">
+      <div class="col-2 " style="margin-top: 6%; font-size: 40px; margin-left: 10%; margin-top: 13%;">
+        <p>Crytpo -Chat 
+
+         </p>
+      </div>
+      <div class="col-3 " >
+        <p><img style="height: 300px; width: 450px; margin-top: 50%;margin-left: 37%;" src= "https://static.wikia.nocookie.net/matrix/images/8/84/Matrix.png/revision/latest/scale-to-width-down/270?cb=20110307094037"> </p>
+      </div>
+
+
+
+{% endblock %}
